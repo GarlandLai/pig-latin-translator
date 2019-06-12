@@ -22,10 +22,9 @@ $(document).ready(function() {
         $("#output").text(userInput + "way");
         }
 
-        else if (qu.includes(userInput[""])) {
-          var searchQU = "qu"
-          var indexOfFirst = userInput.indexOf(searchQU);
-          // $("#output").text(userInput.push(word) + "ay")
+        else if (qu.includes(userInput["indexOfFirst"])) {
+          var quSlice = userInput.slice("indexOfFirst" + 1)
+          $("#output").text(quSlice + indexOfFirst "ay")
         }
 
         else if (consonants.includes(userInput[0]) && consonants.includes(userInput[1])) {
