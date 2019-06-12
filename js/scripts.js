@@ -6,6 +6,10 @@ $(document).ready(function() {
     var consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'W','Y','Z','b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'w', 'y', 'z']
     var userInput = ($("#input1").val());
     var qu = ['qu', 'QU', 'Qu']
+    var searchQU = "qu"
+    var indexOfFirst = userInput.indexOf(searchQU);
+    console.log(indexOfFirst)
+    //gets us the index of "Q"
 
 
     for (var index = 0; index < userInput.length; index += 1)
@@ -17,14 +21,17 @@ $(document).ready(function() {
         else if (vowels.includes(userInput[0])) {
         $("#output").text(userInput + "way");
         }
+
         else if (qu.includes(userInput[""])) {
-          var word = userInput.slice(this)
-          $("#output").text(userInput.push(word) + "ay")
+          var searchQU = "qu"
+          var indexOfFirst = userInput.indexOf(searchQU);
+          // $("#output").text(userInput.push(word) + "ay")
         }
-      else if (consonants.includes(userInput[0]) && consonants.includes(userInput[1])) {
-      var consonantSlice = userInput.slice(2)
-      $("#output").text(consonantSlice + userInput[0] + userInput[1] + "ay");
-      }
+
+        else if (consonants.includes(userInput[0]) && consonants.includes(userInput[1])) {
+          var consonantSlice = userInput.slice(2)
+          $("#output").text(consonantSlice + userInput[0] + userInput[1] + "ay");
+        }
         else if (consonants.includes(userInput[0])) {
         var consonantSlice = userInput.slice(1)
         $("#output").text(consonantSlice + userInput[0] + "ay");
